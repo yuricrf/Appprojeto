@@ -5,13 +5,52 @@
         </ion-title>
     </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">Tab 2</ion-title>
-        </ion-toolbar>
-    </ion-header>
 
-    <app-explore-container name="Tab 2 page"></app-explore-container>
+
+<ion-slides pager="true" [options]="slide" >
+    <ion-slide class="slide-1" >
+        <img src="assets/kanui.jpeg"width=auto height=auto >
+    </ion-slide>
+    
+    <ion-slide class="slide-2">
+        <img src="assets/kanui2.jpg"width=auto height=auto>
+    </ion-slide>
+
+    <ion-slide class="slide-3">
+        <img src="assets/kanui3.jpg"width=auto height=auto>
+    </ion-slide>
+    
+  </ion-slides>
+
+
+
+    <!-- Item as a Button -->
+<ion-item button (click)="buttonClick()"  color="secondary">
+    <ion-label>
+    MASCULINO
+    </ion-label>
+  </ion-item>
+
+
+      <!-- Item as a Button -->
+<ion-item button (click)="buttonClick()"  color="primary">
+    <ion-label>
+        FEMININO
+    </ion-label>
+  </ion-item>
+
+
+  
+  
+
+
+
+
+
 </ion-content>
+
+
+
+
+

@@ -1,14 +1,12 @@
 export class Endereco {
-    userkey: string;    
-
+    userkey: string;
     numero: string;
-    complemento: string = null;
-    
+    complemento: string;
     cep: string;
     logradouro: string;
     bairro: string;
     localidade: string;
     uf: string;
-
     erro:boolean = false;
+  
 }

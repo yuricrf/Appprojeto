@@ -25,7 +25,7 @@ export class EnderecoAddPage implements OnInit {
 
   ngOnInit() {
     this.userkey = this.activadeRouter.snapshot.paramMap.get('key');
-    this.endereco.userkey = this.userkey
+    this.endereco.userkey = this.userkey;
     //this.getEndereco(this.key)
   }
 
@@ -65,6 +65,7 @@ export class EnderecoAddPage implements OnInit {
     )
   }
 
+
   salvar() {
     try {
       this.msg.presentLoading();
@@ -74,15 +75,14 @@ export class EnderecoAddPage implements OnInit {
             this.msg.dismissLoading();
             this.msg.presentAlert('Alerta', 'Endereço cadastrado.');
             this.endereco = new Endereco();
-            this.router.navigate(['']);
+            this.router.navigate(['/tabs/user-perfil',this.userkey]);
           },
           error => {
             console.error("Erro ao salvar.", error);
             this.msg.dismissLoading();
-            this.msg.presentAlert("Error", "Não foi possivel salvar.");
+            this.msg.presentAlert("Error", "Não foi possivel salvar o endereço.");
           }
         )
-      
     } catch (error) {
       console.error("Erro ao salvar.", error);
       this.msg.dismissLoading();
@@ -101,3 +101,4 @@ export class EnderecoAddPage implements OnInit {
   }
 
 }
+
